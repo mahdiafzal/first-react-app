@@ -5,6 +5,10 @@
   "repository": "https://github.com/mahdiafzal/first-react-app.git",
   "author": "mahdiafzal <mahdiafzal@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "parcel build ./src/index.html",
+    "start": "parcel ./src/index.html -p 1983"
+  },
   "dependencies": {
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
