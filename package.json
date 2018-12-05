@@ -1,0 +1,8 @@
+{
+  "name": "first-react-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mahdiafzal/first-react-app.git",
+  "author": "mahdiafzal <mahdiafzal@gmail.com>",
+  "license": "MIT"
+}
