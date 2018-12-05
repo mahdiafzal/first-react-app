@@ -4,5 +4,11 @@
   "main": "index.js",
   "repository": "https://github.com/mahdiafzal/first-react-app.git",
   "author": "mahdiafzal <mahdiafzal@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-router-dom": "^4.3.1",
+    "styled-components": "^4.1.2"
+  }
 }
