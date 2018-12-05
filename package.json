@@ -1,6 +1,18 @@
 {
   "name": "first-react-app",
   "version": "1.0.0",
+  "description": "A simple website build with react.",
+  "engines": {
+    "node": ">=9.x",
+    "npm": ">=5.x",
+    "yarn": ">=1.x.x"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "styled-components",
+    "website"
+  ],
   "main": "index.js",
   "repository": "https://github.com/mahdiafzal/first-react-app.git",
   "author": "mahdiafzal <mahdiafzal@gmail.com>",
