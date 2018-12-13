@@ -1,5 +1,5 @@
 {
-  "name": "first-react-app",
+  "name": "react-website",
   "version": "1.0.0",
   "description": "A simple website build with react.",
   "engines": {
@@ -13,13 +13,11 @@
     "styled-components",
     "website"
   ],
-  "main": "index.js",
-  "repository": "https://github.com/mahdiafzal/first-react-app.git",
-  "author": "mahdiafzal <mahdiafzal@gmail.com>",
-  "license": "MIT",
+  "main": "./src/index.js",
+  "license": "ISC",
   "scripts": {
     "build": "parcel build ./src/index.html",
-    "start": "parcel ./src/index.html -p 1983"
+    "start": "parcel ./src/index.html -p 1337"
   },
   "dependencies": {
     "react": "^16.6.3",

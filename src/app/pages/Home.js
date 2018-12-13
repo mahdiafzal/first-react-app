@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router';
 
-// Import Button component
+/// Import Button component
 import Button from './../components/Button'
 
 // Import Container component
@@ -60,7 +60,7 @@ const HomeWrapper = styled(Section)`
 const HomeButton = Button.withComponent('a')
 
 export default class Home extends React.Component {
-  render () {
+  render() {
     return (
       <HomeWrapper centered>
         <Container>

@@ -1,12 +1,10 @@
 import React from 'react'
-import styled, {
-  css
-} from 'styled-components'
+import styled, { css } from 'styled-components'
 
 // Import Button component
 import Button from './Button'
 
-const Header = styled.header `
+const Header = styled.header`
   position: fixed;
   top: 0;
   left: 0;
@@ -14,7 +12,7 @@ const Header = styled.header `
   width: 100%;
 `
 
-const NavWrapper = styled.nav `
+const NavWrapper = styled.nav`
   padding: 16px;
   display: flex;
   justify-content: flex-end;
@@ -34,7 +32,7 @@ const NavWrapper = styled.nav `
   }
 `
 
-const NavList = styled.ul `
+const NavList = styled.ul`
   margin: 0;
   display: flex;
   overflow: hidden;
@@ -51,7 +49,7 @@ const NavList = styled.ul `
   }
 `
 
-const NavItem = styled.li `
+const NavItem = styled.li`
   & + & {
     margin-top: 12px;
   }
@@ -76,55 +74,54 @@ const NavItem = styled.li `
   }
 `
 
-const NavButton = styled(Button)
-`
+const NavButton = styled(Button)`
   @media (min-width: 479px) {
     display: none;
   }
 `
 
-exexport default class Nav extends React.Component {
-  constructor(props) {
-    super(props)
+export default class Nav extends React.Component {
+    constructor(props) {
+        super(props)
 
-    this.state = {
-      show: false
+        this.state = {
+            show: false
+        }
+
+        this.toggleMenu = this.toggleMenu.bind(this)
     }
 
-    this.toggleMenu = this.toggleMenu.bind(this)
-  }
+    toggleMenu() {
+        this.setState({
+            show: !this.state.show
+        })
+    }
 
-  toggleMenu() {
-    this.setState({
-      show: !this.state.show
-    })
-  }
+    render() {
+        return (
+            <Header>
+                <NavWrapper isOpen={this.state.show}>
+                    <NavButton onClick={this.toggleMenu}>Menu</NavButton>
 
-  render () {
-    return (
-      <header>
-        <NavWrapper isOpen={this.state.show}>
-          <NavButton onClick={this.toggleMenu}>Menu</NavButton>
+                    <NavList>
+                        <NavItem>
+                            <a href="/">Home</a>
+                        </NavItem>
 
-          <NavList>
-            <NavItem>
-              <a href="/">Home</a>
-            </NavItem>
+                        <NavItem>
+                            <a href="/about">About</a>
+                        </NavItem>
 
-            <NavItem>
-              <a href="/about">About</a>
-            </NavItem>
+                        <NavItem>
+                            <a href="/portfolio">Portfolio</a>
+                        </NavItem>
 
-            <NavItem>
-              <a href="/portfolio">Portfolio</a>
-            </NavItem>
-
-            <NavItem>
-              <a href="/contact">Contact</a>
-            </NavItem>
-          </NavList>
-        </NavWrapper>
-      </header>
-    )
-  }
+                        <NavItem>
+                            <a href="/contact">Contact</a>
+                        </NavItem>
+                    </NavList>
+                </NavWrapper>
+            </Header>
+        )
+    }
 }
